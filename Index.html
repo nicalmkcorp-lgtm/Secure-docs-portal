@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Secure Document</title>
+    <style>
+        /* This makes the iframe fill the whole screen */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #f8fafc; }
+        iframe { width: 100%; height: 100%; border: none; display: block; }
+    </style>
+</head>
+<body>
+    <script>
+        // -------------------------------------------------------
+        // REPLACE THIS LINK WITH YOUR MASTER SCRIPT URL
+        const googleScriptUrl = "https://script.google.com/macros/s/AKfycbxp4qdAeQZHBIPgAWjJHbdQOZ9N07m_PPBNk23Nz9Pi44rLuo9I0t7F8BkzVXwXWY1-AQ/exec";
+        // -------------------------------------------------------
+
+        // This allows the signing parameters (draftId, etc.) to pass through
+        const params = window.location.search; 
+        
+        // Create the window
+        document.write('<iframe src="' + googleScriptUrl + params + '" allow="camera; microphone"></iframe>');
+    </script>
+</body>
+</html>
